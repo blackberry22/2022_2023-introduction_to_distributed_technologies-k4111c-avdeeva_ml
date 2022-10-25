@@ -25,3 +25,9 @@ minikube kubectl -- expose pod vault --type=NodePort --port=8200 команда 
 minikube kubectl -- port-forward service/vault 8200:8200  команда, которая прокидывает порт компьютера в контейнер 
 
 minikube stop  остановка кластера
+
+Где взять токен? 
+
+- токен можно найти, используя команду minikube kubectl -- logs vault
+
+![]
