@@ -30,8 +30,14 @@ minikube stop  остановка кластера
 
 - токен можно найти, используя команду minikube kubectl -- logs vault
 
+Схема:
+
 ![схема](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab1/lab1_.png)
 
+Расположение токена
+
 ![расположение токена](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab1/lab1_3.png)
+
+Результат работы
 
 ![результат работы](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab1/lab1_2.png)
