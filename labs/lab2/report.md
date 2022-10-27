@@ -15,3 +15,8 @@ Lab: Lab2
 Date of create: 25.10.2022
 
 Date of finished: --.--.2022
+
+```bash
+minikube start  
+minikube kubectl -- apply -f lab2.yaml 
+```
