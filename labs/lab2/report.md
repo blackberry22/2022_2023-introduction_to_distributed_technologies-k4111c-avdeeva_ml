@@ -40,7 +40,7 @@ minikube kubectl -- apply -f lab2.yaml
 Выведем логи
 
 ```bash
-minikube kubectl -- logs lab2-deployment74645dd58c-ps7h
+minikube kubectl -- logs lab2-deployment74645dd58c-p4s7h
 ```
 
 ![logs](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab2/lab2_4.png)
