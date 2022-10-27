@@ -24,7 +24,7 @@ Date of finished: --.--.2022
 
 `minikube kubectl -- apply -f lab1.yaml` создание ресурсов kuberntes из манифеста
 
-`minikube kubectl -- expose pod vault --type=NodePort --port=8200` команда необходимая для того, Чтобы получить доступ к поде извне, создание объекта сервис (Service):
+`minikube kubectl -- expose pod vault --type=NodePort --port=8200` создание объекта сервис, команда необходимая для того, чтобы получить доступ к поде извне
 
 `minikube kubectl -- port-forward service/vault 8200:8200`  команда, которая прокидывает порт компьютера в контейнер 
 
@@ -32,7 +32,7 @@ Date of finished: --.--.2022
 
 ## Где взять токен? 
 
-- токен можно найти, используя команду `minikube kubectl -- logs vault`
+Токен можно найти, используя команду `minikube kubectl -- logs vault`
 
 ## Схема
 
