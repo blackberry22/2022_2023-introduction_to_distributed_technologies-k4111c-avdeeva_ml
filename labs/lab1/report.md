@@ -16,28 +16,32 @@ Date of create: 10.10.2022
 
 Date of finished: --.--.2022
 
-minikube start запуск кластера minikube
+# Выполнение лабораторной работы
 
-minikube kubectl -- apply -f lab1.yaml создание ресурсов kuberntes из манифеста
+## Code trace
 
-minikube kubectl -- expose pod vault --type=NodePort --port=8200 команда необходимая для того, Чтобы получить доступ к поде извне, создание объекта сервис (Service):
+`minikube start` запуск кластера minikube
 
-minikube kubectl -- port-forward service/vault 8200:8200  команда, которая прокидывает порт компьютера в контейнер 
+`minikube kubectl -- apply -f lab1.yaml` создание ресурсов kuberntes из манифеста
 
-minikube stop  остановка кластера
+`minikube kubectl -- expose pod vault --type=NodePort --port=8200` команда необходимая для того, Чтобы получить доступ к поде извне, создание объекта сервис (Service):
 
-Где взять токен? 
+`minikube kubectl -- port-forward service/vault 8200:8200`  команда, которая прокидывает порт компьютера в контейнер 
 
-- токен можно найти, используя команду minikube kubectl -- logs vault
+`minikube stop`  остановка кластера
 
-Схема:
+## Где взять токен? 
+
+- токен можно найти, используя команду `minikube kubectl -- logs vault`
+
+## Схема
 
 ![схема](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab1/lab1_.png)
 
-Расположение токена:
+## Расположение токена
 
 ![расположение токена](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab1/lab1_3.png)
 
-Результат работы:
+## Результат работы
 
 ![результат работы](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab1/lab1_2.png)
