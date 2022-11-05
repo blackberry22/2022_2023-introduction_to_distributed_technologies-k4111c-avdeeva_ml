@@ -14,7 +14,7 @@ Lab: Lab2
 
 Date of create: 25.10.2022
 
-Date of finished: --.--.2022
+Date of finished: 05.11.2022
 
 # Выполнение лабораторной работы
 
