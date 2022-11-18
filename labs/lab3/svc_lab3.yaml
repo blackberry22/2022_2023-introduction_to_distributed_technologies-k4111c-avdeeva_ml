@@ -1,0 +1,11 @@
+kind: Service
+metadata:
+  name: lab3-svc
+spec:
+  selector:
+    app: lab3
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
