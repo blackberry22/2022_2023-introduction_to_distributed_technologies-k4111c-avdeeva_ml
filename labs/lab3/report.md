@@ -60,7 +60,7 @@ openssl req -x509 -new -nodes -days 365 -key ca.key ca.crt
 kubectl create secret tls lab3-secret \
 --key ca.key \
 --cert ca.crt
-```bash
+```
 
 ![result4](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab3/lab3_4.png)
 
