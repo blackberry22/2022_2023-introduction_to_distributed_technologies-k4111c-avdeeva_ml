@@ -66,7 +66,7 @@ kubectl create secret tls lab3-secret \
 
 Пропишем DNS:
 
-![result6](labs/lab3/lab3_6.PNG)
+![result6](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab3/lab3_6.PNG)
 
 Проверим сертификат
 
@@ -74,6 +74,6 @@ kubectl create secret tls lab3-secret \
 
 ## Схема
 
-![result7](labs/lab3/lab3_sheme.png)
+![result7](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab3/lab3_sheme.png)
 
 
