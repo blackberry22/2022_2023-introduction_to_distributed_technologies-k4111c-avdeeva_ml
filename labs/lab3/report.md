@@ -28,7 +28,7 @@ kubectl apply -f config-map_lab3.yaml
 ```
 
 создадим replicaSet с 2 репликами контейнера ifilyaninitmo/itdt-contained-frontend:master и используя ранее созданный configMap передадим переменные REACT_APP_USERNAME, REACT_APP_COMPANY_NAME .
-
+![result1](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab3/lab3_1.png)
 
 ```bash
 kubectl apply -f ReplicaSet_lab3.yaml
@@ -36,7 +36,7 @@ kubectl apply -f ReplicaSet_lab3.yaml
 
 Проверим, что переменные добавлены
 
-[]скрин2
+![result2](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab3/lab3_2.png)
 
 Включим minikube addons enable ingress и проверим,что ingress включен
 
@@ -44,18 +44,36 @@ kubectl apply -f ReplicaSet_lab3.yaml
 minikube addons enable ingress
 minikube addons list
 ```
-[] скрин 1
+![result3](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab3/lab3_3.png)
 
 
 сгенерируем TLS сертификат, испольюзуя openssl
 
-[] скрины
 
-Проверим, сертификат
+```bash
+openssl genrsa -out ca.key 2048
+openssl req -x509 -new -nodes -days 365 -key ca.key ca.crt
+```
+Создадим secret и добавим в него сертификат
 
-[]скрин
+```bash
+kubectl create secret tls lab3-secret \
+--key ca.key \
+--cert ca.crt
+```bash
 
-схема
-[]
+![result4](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab3/lab3_4.png)
+
+Пропишем DNS:
+
+![result6](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab3/lab3_6.png)
+
+Проверим сертификат
+
+![result5](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab3/lab3_5.png)
+
+## Схема
+
+![result5](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab3/lab3_sheme.png)
 
 
