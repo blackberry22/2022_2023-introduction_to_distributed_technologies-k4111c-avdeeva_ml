@@ -28,28 +28,28 @@ minikube kubectl -- get nodes
 ```
 Убедимся, что 2 ноды запущены
 
-![result1]()
+![result1](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab4/lab4_1.png)
 
 Проверим, что необходимые ресурсы созданы
 
 ```bash
 Minikube kubectl – get pods –A
 ```
-![result2]()
+![result2](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab4/lab4_2.png)
 
 Статус нод можно узнать, используя следующую команду:
 
 ```bash
 minikube status -p minikube
 ```
-![result3]()
+![result3](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab4/lab4_3.png)
 
 Установим calicoctl pod, манифест скопирован с официального сайта calico:
 
 ```bash
 kubectl apply -f calicoctl.yaml
 ```
-![result4]()
+![result4](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab4/lab4_4.png)
 
 Зададим lables для нод по географическому признаку:
 
@@ -65,14 +65,14 @@ kubectl exec -i -n kube-system calicoctl -- /calicoctl create -f - < ip_pool.yam
 kubectl exec -i -n kube-system calicoctl -- /calicoctl  delete ippools default-ipv4-ippool
 kubectl exec -i -n kube-system calicoctl -- /calicoctl  get ippools -o wide
 ```
-![result5]()
+![result5](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab4/lab4_5.png)
 
 Создадим ресурсы: сервис, config map с требуемыми переменными, а также replicaset
 
 ```bash
 kubectl apply -f resources.yaml
 ```
-![result6]()
+![result6](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab4/lab4_6.png)
 
 Пробросим порт:
 
@@ -81,18 +81,18 @@ kubectl port-forward service/lab4-svc 3000:8000
 ```
 и проверим, что приложение получило IP адрес из пула, заданного в конфигурационном файле:
 
-![result7]()
+![result7](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab4/lab4_7.png)
 
 Узнаем IP адреса, полученнные нодами:
 
-![result8]()
+![result8](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab4/lab4_8.png)
 
 Проверим сетевую связность, испозуя утилиту ping:
 
 ```bash
 kubectl exec -it lab4-app-j55mr  -- ping 192.168.2.1
 ```
-![result9]()
+![result9](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab4/lab4_9.png)
 
 #Схема
 
