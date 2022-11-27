@@ -49,7 +49,7 @@ minikube status -p minikube
 ```bash
 kubectl apply -f calicoctl.yaml
 ```
-![result4](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab4/lab4_4.png)
+![result4](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab4/lab4_4.PNG)
 
 Зададим lables для нод по географическому признаку:
 
