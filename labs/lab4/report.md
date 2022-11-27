@@ -87,7 +87,7 @@ kubectl port-forward service/lab4-svc 3000:8000
 
 ![result8](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab4/lab4_8.png)
 
-Проверим сетевую связность, испозуя утилиту ping:
+Проверим сетевую связность, используя утилиту ping:
 
 ```bash
 kubectl exec -it lab4-app-j55mr  -- ping 192.168.2.1
