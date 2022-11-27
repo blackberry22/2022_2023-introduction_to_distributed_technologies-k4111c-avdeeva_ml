@@ -12,6 +12,90 @@ Author: Avdeeva Margarita Leonidovna
 
 Lab: Lab4
 
-Date of create: --.--.2022
+Date of create: 25.11.2022
 
 Date of finished: --.--.2022
+
+# Выполнение лабораторной работы
+
+## Code trace
+
+Создадим кластер minikube с 2 нодами, а также установим плагин CNI=calico 
+
+```bash
+minikube start --nodes 2 --cni calico --kubernetes-version=v1.24.3
+minikube kubectl -- get nodes
+```
+Убедимся, что 2 ноды запущены
+
+![result1]()
+
+Проверим, что необходимые ресурсы созданы
+
+```bash
+Minikube kubectl – get pods –A
+```
+![result2]()
+
+Статус нод можно узнать, используя следующую команду:
+
+```bash
+minikube status -p minikube
+```
+![result3]()
+
+Установим calicoctl pod, манифест скопирован с официального сайта calico:
+
+```bash
+kubectl apply -f calicoctl.yaml
+```
+![result4]()
+
+Зададим lables для нод по географическому признаку:
+
+```bash
+kubectl label nodes minikube zone=west
+kubectl label nodes minikube-m02 zone=east
+```
+
+Создадим ip pool, удалим пул по умолчанию:
+
+```bash
+kubectl exec -i -n kube-system calicoctl -- /calicoctl create -f - < ip_pool.yaml
+kubectl exec -i -n kube-system calicoctl -- /calicoctl  delete ippools default-ipv4-ippool
+kubectl exec -i -n kube-system calicoctl -- /calicoctl  get ippools -o wide
+```
+![result5]()
+
+Создадим ресурсы: сервис, config map с требуемыми переменными, а также replicaset
+
+```bash
+kubectl apply -f resources.yaml
+```
+![result6]()
+
+Пробросим порт:
+
+```bash
+kubectl port-forward service/lab4-svc 3000:8000
+```
+и проверим, что приложение получило IP адрес из пула, заданного в конфигурационном файле:
+
+![result7]()
+
+Узнаем IP адреса, полученнные нодами:
+
+![result8]()
+
+Проверим сетевую связность, испозуя утилиту ping:
+
+```bash
+kubectl exec -it lab4-app-j55mr  -- ping 192.168.2.1
+```
+![result9]()
+
+#Схема
+
+![result10]()
+
+
