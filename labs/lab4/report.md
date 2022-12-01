@@ -33,7 +33,7 @@ minikube kubectl -- get nodes
 Проверим, что необходимые ресурсы созданы
 
 ```bash
-minikube kubectl –- get pods –A
+minikube kubectl -- get po -A
 ```
 ![result2](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab4/lab4_2.png)
 
