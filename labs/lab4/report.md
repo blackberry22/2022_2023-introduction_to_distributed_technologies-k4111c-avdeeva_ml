@@ -94,7 +94,7 @@ kubectl exec -it lab4-app-j55mr  -- ping 192.168.2.1
 ```
 ![result9](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab4/lab4_9.png)
 
-#Схема
+# Схема
 
 ![result10](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab4/lab_4shceme.png)
 
