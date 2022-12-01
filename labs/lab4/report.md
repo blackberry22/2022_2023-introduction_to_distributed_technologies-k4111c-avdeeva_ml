@@ -79,7 +79,7 @@ kubectl apply -f resources.yaml
 ```bash
 kubectl port-forward service/lab4-svc 3000:8000
 ```
-Узнаем IP адреса, полученнные нодами:
+Узнаем IP адреса, полученнные подами:
 
 ![result7](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/labs/lab4/lab4_7.png)
 
