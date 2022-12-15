@@ -1,4 +1,4 @@
-Что такое виртуализация? Какие виды бывают, чем виртуализация отличается от контейнеризации и отличается ли?
+### Что такое виртуализация? Какие виды бывают, чем виртуализация отличается от контейнеризации и отличается ли?
 
 virtualization is the provision of a set of computing resources or their logical association, abstracted from the hardware, 
 through the separation of physical resources.
@@ -18,10 +18,12 @@ hardware virtualization allows virtual computers to be independent and isolated 
 containerization is another type of virtualization.
 
 ![exam.png](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/png.png)
+
+
 containerization is more lightweight. applications inside containers are isolated from each other
 
 
-- Алгоритмы консенсуса. PoW, PoS, DPoS и прочие.
+### Алгоритмы консенсуса. PoW, PoS, DPoS и прочие.
 
 POW proof of work
 The essence of PoW is as follows: network nodes (miners) must solve complex mathematical problems (hash functions)
