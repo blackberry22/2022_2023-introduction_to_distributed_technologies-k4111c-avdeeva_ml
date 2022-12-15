@@ -5,12 +5,15 @@ through the separation of physical resources.
 types of virtualizing :
 
 1. Application Virtualization: 
-Application virtualization refers to the process of deploying a computer application over a network (cloud). 
+ Application virtualization refers to the process of deploying a computer application over a network (cloud). 
 The deployed application is installed locally on the server, and when the user requests it,
 the application instance is shown to the user. The user can then interact with that application as if it were installed on their system.
 2. Network Virtualization: 
-3. Desktop Virtualization: 
+Network virtualization refers to combining all the components of networks and administering them using only software. These network components include all the underlying hardware and software of a network with their respective functionalities
+3. Desktop Virtualization:
+ Desktop virtualization is similar to application virtualization, but the apps are now replaced with whole desktop environments.
 4. Server Virtualization:
+Server virtualization refers to partitioning the resources of a server, which consist of hardware, software and networking resources, and distributing them over a network. 
 
 hardware virtualization allows virtual computers to be independent and isolated from each other using software simulation of resources
 (processor, memory, network, disk, etc.) of a physical server.
