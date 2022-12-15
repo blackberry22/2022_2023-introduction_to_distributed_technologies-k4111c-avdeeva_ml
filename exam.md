@@ -17,6 +17,7 @@ hardware virtualization allows virtual computers to be independent and isolated 
 
 containerization is another type of virtualization.
 
+![exam.png](https://github.com/blackberry22/2022_2023-introduction_to_distributed_technologies-k4111c-avdeeva_ml/blob/main/png.png)
 containerization is more lightweight. applications inside containers are isolated from each other
 
 
